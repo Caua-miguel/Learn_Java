@@ -1,6 +1,6 @@
-package me.cauadeveloper;
+package me.cauadeveloper.Win;
 
-import me.cauadeveloper.entities.Product;
+import me.cauadeveloper.Win.entities.Product;
 
 import java.io.*;
 import java.text.ParseException;
@@ -20,16 +20,15 @@ public class Aplication {
         File sourceFile = new File((sourceFileStr));
         String sourceFolderStr = sourceFile.getParent();
 
-        boolean success = new File(sourceFolderStr + "\\out").mkdir();
+        boolean success = new File(sourceFolderStr + "/out").mkdir();
 
-        String targetFileStr = sourceFolderStr + "\\out\\summary.csv";
+        String targetFileStr = sourceFolderStr + "/out/summary.csv";
 
         try(BufferedReader br = new BufferedReader((new FileReader(sourceFileStr)))){
 
             String itemCsv = br.readLine();
 
            while (itemCsv !=null) {
-
 
                String[] fields = itemCsv.split(";");
                String nome = fields[0];

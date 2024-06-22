@@ -1,4 +1,4 @@
-package me.cauadeveloper.entities;
+package me.cauadeveloper.Win.entities;
 
 public class Product {
 
