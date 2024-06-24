@@ -1,4 +1,4 @@
-package me.cauadeveloper.Win;
+package me.cauadeveloper.Win.Aplication;
 
 import me.cauadeveloper.Win.entities.Product;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Aplication {
+public class ProductApp {
     public static void main(String[] args) throws ParseException {
 
         List<Product> list = new ArrayList<>();
