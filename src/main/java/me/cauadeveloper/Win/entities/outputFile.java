@@ -17,21 +17,17 @@ public class outputFile {
             String win = inputStr();
             int count = win.length()-1;
 
+            // Testar um for indo de 0 até length para ver se o array fica direto na posição correta;
             while (count >= 0){
                 list.add(win.charAt(count));
                 count--;
             }
+
             int size = list.size();
-            for (int i = 0, j = size - 1 ; i < j; i++){
+            for (int i = 0, j = size - 1 ; i <= j; i++){
                 list.add(i, list.remove(j));
-            }
-
-            Character[] arr = new Character[list.size()];
-
-            for (int i = 0; i <= list.size() - 1; i++){
-                arr[i] = list.get(i);
-                System.out.print(arr[i]);
-                bf.write(arr[i]);
+                System.out.print(list.get(i));
+                bf.write(list.get(i));
             }
             System.out.println("\nwriting success");
         }catch (IOException e){
