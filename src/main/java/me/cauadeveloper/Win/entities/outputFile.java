@@ -13,12 +13,12 @@ public class outputFile {
 
         try (BufferedOutputStream bf = new BufferedOutputStream(new FileOutputStream("C:\\Dev\\AplicationFiles\\outStr.txt"))){
 
-            ArrayList<Byte> list = new ArrayList<>();
+            ArrayList<Character> list = new ArrayList<>();
             String win = inputStr();
             int count = win.length()-1;
 
             while (count >= 0){
-                list.add((byte) win.charAt(count));
+                list.add(win.charAt(count));
                 count--;
             }
             int size = list.size();
@@ -26,11 +26,12 @@ public class outputFile {
                 list.add(i, list.remove(j));
             }
 
-            Byte[] arr = new Byte[list.size()];
+            Character[] arr = new Character[list.size()];
 
             for (int i = 0; i <= list.size() - 1; i++){
                 arr[i] = list.get(i);
-                System.out.print(arr[i] + " ");
+                System.out.print(arr[i]);
+                bf.write(arr[i]);
             }
             System.out.println("\nwriting success");
         }catch (IOException e){
