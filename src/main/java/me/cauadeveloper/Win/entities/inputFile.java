@@ -32,21 +32,25 @@ public class inputFile {
         return null;
     }
 
-    public static void inputRead(){
+    public static StringBuilder inputRead(){
 
         try(BufferedReader bf = new BufferedReader(new FileReader("C:\\Dev\\AplicationFiles\\inpStr.txt"))){
 
+            StringBuilder text = new StringBuilder();
             String txt = bf.readLine();
 
             while (txt != null){
-                System.out.println(txt);
+                text.append(txt);
+                text.append("\n");
                 txt = bf.readLine();
             }
+
+            return text;
 
         }catch (IOException e){
             e.printStackTrace();
         }
-
+        return null;
     }
 
 }
