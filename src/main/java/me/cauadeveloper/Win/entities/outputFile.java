@@ -17,7 +17,7 @@ public class outputFile {
             String win = inputStr();
             int count = win.length()-1;
 
-            // Testar um for indo de 0 até length para ver se o array fica direto na posição correta;
+            // Usando while e revertendo as posições do array
             while (count >= 0){
                 list.add(win.charAt(count));
                 count--;

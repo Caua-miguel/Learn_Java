@@ -1,15 +1,12 @@
 package me.cauadeveloper.Linux.Entities;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-public class AppInputStream {
+public class AppInputFile {
 
-    public static void printStr(){
+    public static  String printStr(){
         try (InputStream inputStream = new BufferedInputStream(new FileInputStream("/home/caua/Documentos/Dev/Backend/LearnFolders/Data/inptStr"))){
 
             ArrayList<Byte> list = new ArrayList<>();
@@ -25,12 +22,31 @@ public class AppInputStream {
             for (int i = 0; i < list.size(); i++){
                 arr[i] = list.get(i);
             }
-            System.out.println(new String(arr, StandardCharsets.UTF_8));
+            return new String(arr, StandardCharsets.UTF_8);
+        }catch (
+                IOException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public static void printReader(){
+        try (BufferedReader reader = new BufferedReader(new FileReader("/home/caua/Documentos/Dev/Backend/LearnFolders/Data/inptStr"))){
+
+            ArrayList<String> list = new ArrayList<>();
+            String txt = reader.readLine();
+
+            while (txt != null){
+                list.add(txt);
+                System.out.println(list.get(list.size()-1));
+                txt = reader.readLine();
+            }
+
         }catch (
                 IOException e){
             e.printStackTrace();
         }
     }
-
 
 }
