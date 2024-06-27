@@ -4,11 +4,13 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+import static me.cauadeveloper.Win.entities.CreateCSV.newCSV;
+
 public class inputFile {
 
     public static String inputStr(){
 
-        try(BufferedInputStream bf = new BufferedInputStream(new FileInputStream("C:\\Dev\\AplicationFiles\\inpStr.txt"))){
+        try(BufferedInputStream bf = new BufferedInputStream(new FileInputStream("C:\\Dev\\AplicationFiles\\data.csv"))){
 
             ArrayList<Byte> list = new ArrayList<>();
             int data = bf.read();
@@ -34,7 +36,9 @@ public class inputFile {
 
     public static StringBuilder inputRead(){
 
-        try(BufferedReader bf = new BufferedReader(new FileReader("C:\\Dev\\AplicationFiles\\inpStr.txt"))){
+        File newCSV = newCSV();
+
+        try(BufferedReader bf = new BufferedReader(new FileReader(newCSV))){
 
             StringBuilder text = new StringBuilder();
             String txt = bf.readLine();

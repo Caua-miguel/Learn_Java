@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static me.cauadeveloper.Win.entities.CreateCSV.newCSV;
 import static me.cauadeveloper.Win.entities.inputFile.inputRead;
 import static me.cauadeveloper.Win.entities.inputFile.inputStr;
 
@@ -40,9 +41,11 @@ public class outputFile {
 
     }
 
-    public static void outputReader(){
+    public static void outputWriter(){
 
-        try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\Dev\\AplicationFiles\\outStr.txt"))){
+//        File newCSV = newCSV();
+
+        try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\Dev\\AplicationFiles\\teste.csv"))){
 
             StringBuilder txt = inputRead();
 
