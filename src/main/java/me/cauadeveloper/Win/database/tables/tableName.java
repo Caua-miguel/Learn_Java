@@ -2,6 +2,9 @@ package me.cauadeveloper.Win.database.tables;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Arrays;
+
+import static me.cauadeveloper.Win.database.config.readConfig.readLines;
 import static me.cauadeveloper.Win.database.config.sqliteConnection.getConn;
 import static me.cauadeveloper.Win.entities.inputFile.inputRead;
 
@@ -10,18 +13,17 @@ public class tableName {
 
     public static void insert(){
 
-        //Fazer um loop no setString para inserir os valores linha a linha
-
         String sql = """
                 INSERT OR REPLACE into nome(nome) values (?)
                 """;
-        StringBuilder txt = inputRead();
-        String test = String.valueOf(txt);
-
+        String[] arr = readLines();
+        System.out.print(Arrays.toString(arr));
         try (PreparedStatement stmt = getConn().prepareStatement(sql)){
 
-            stmt.setString(1, test);
-            stmt.execute();
+            for (int i = 1; i <= arr.length-1; i++){
+                stmt.setString(1, arr[i]);
+                stmt.execute();
+            }
 
         }catch (SQLException e){
             e.printStackTrace();

@@ -45,11 +45,11 @@ public class outputFile {
 
 //        File newCSV = newCSV();
 
-        try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\Users\\caua.rocha\\IdeaProjects\\File_Aplication\\src\\main\\java\\me\\cauadeveloper\\Win\\database\\data\\data.db"))){
+        try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\Dev\\AplicationFiles\\teste.csv"))){
 
             StringBuilder txt = inputRead();
-
             bf.write(String.valueOf(txt));
+
             System.out.println("StringBuilde Success");
 
 

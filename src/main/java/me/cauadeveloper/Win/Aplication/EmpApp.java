@@ -17,12 +17,11 @@ public class EmpApp {
     public static void main(String[] args) throws IOException, SQLException {
 
 //          inputStr();
-//            inputRead();
+            inputRead();
 //          outputStr();
 //            outputWriter();
 //            newCSV();
-//        ApplyMethodsSQLite.createTable();
-//        readLines();
+        ApplyMethodsSQLite.createTable();
 
 
     }

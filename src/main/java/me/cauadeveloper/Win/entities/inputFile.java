@@ -36,9 +36,9 @@ public class inputFile {
 
     public static StringBuilder inputRead(){
 
-        File newCSV = newCSV();
+//        File newCSV = newCSV();
 
-        try(BufferedReader bf = new BufferedReader(new FileReader(newCSV))){
+        try(BufferedReader bf = new BufferedReader(new FileReader("C:\\Dev\\AplicationFiles\\data.csv"))){
 
             StringBuilder text = new StringBuilder();
             String txt = bf.readLine();
