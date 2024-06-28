@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conn {
+public class sqliteConnection {
 
     // O que precisamos para um connecção com banco de dados:
     // drivers do SQLite
@@ -13,12 +13,12 @@ public class Conn {
     public static Connection getConn() throws SQLException{
 
         try{
-            String url = "jdbc:sqlite:C:\\Dev\\AplicationFiles\\data.db";
+            String url = "jdbc:sqlite:C:\\Users\\caua.rocha\\IdeaProjects\\File_Aplication\\src\\main\\java\\me\\cauadeveloper\\Win\\database\\data\\data.db";
             return DriverManager.getConnection(url);
         }catch (SQLException e){
             e.printStackTrace();
         }
-    return null;
+        return null;
     }
 
 }

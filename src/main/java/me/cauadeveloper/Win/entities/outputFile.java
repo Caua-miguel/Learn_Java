@@ -45,7 +45,7 @@ public class outputFile {
 
 //        File newCSV = newCSV();
 
-        try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\Dev\\AplicationFiles\\teste.csv"))){
+        try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\Users\\caua.rocha\\IdeaProjects\\File_Aplication\\src\\main\\java\\me\\cauadeveloper\\Win\\database\\data\\data.db"))){
 
             StringBuilder txt = inputRead();
 
