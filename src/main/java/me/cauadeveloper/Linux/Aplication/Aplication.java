@@ -1,20 +1,22 @@
 package me.cauadeveloper.Linux.Aplication;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
-import static me.cauadeveloper.Linux.Entities.AppInputFile.printReader;
-import static me.cauadeveloper.Linux.Entities.AppInputFile.printStr;
-import static me.cauadeveloper.Linux.Entities.AppOutputFile.outputStr;
+import me.cauadeveloper.Linux.Entities.createFile;
+import me.cauadeveloper.Linux.database.config.ApplyMethodsSQLite;
 
 public class Aplication {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
 
 //        printStr();
 //        System.out.println("--------------------------");
-        printReader();
+//        printReader();
 //        System.out.println("--------------------------");
 //        outputStr();
+//        createFile.createDataFile();
+        ApplyMethodsSQLite.createTable();
 
     }
 
