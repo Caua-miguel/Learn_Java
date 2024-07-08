@@ -3,7 +3,8 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .idea
-target
+*/target/
+*/LearnFolders/
 pom.xml
 
 ### IntelliJ IDEA ###
