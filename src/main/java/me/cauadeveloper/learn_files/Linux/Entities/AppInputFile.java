@@ -1,4 +1,4 @@
-package me.cauadeveloper.Linux.Entities;
+package me.cauadeveloper.learn_files.Linux.Entities;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

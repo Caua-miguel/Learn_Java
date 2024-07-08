@@ -1,12 +1,12 @@
-package me.cauadeveloper.Win.database.tables;
+package me.cauadeveloper.learn_files.Win.database.tables;
+
+import me.cauadeveloper.learn_files.Win.database.config.readConfig;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Arrays;
 
-import static me.cauadeveloper.Win.database.config.readConfig.readLines;
-import static me.cauadeveloper.Win.database.config.sqliteConnection.getConn;
-import static me.cauadeveloper.Win.entities.inputFile.inputRead;
+import static me.cauadeveloper.learn_files.Win.database.config.sqliteConnection.getConn;
 
 public class tableName {
 
@@ -16,7 +16,7 @@ public class tableName {
         String sql = """
                 INSERT OR REPLACE into nome(nome) values (?)
                 """;
-        String[] arr = readLines();
+        String[] arr = readConfig.readLines();
         System.out.print(Arrays.toString(arr));
         try (PreparedStatement stmt = getConn().prepareStatement(sql)){
 

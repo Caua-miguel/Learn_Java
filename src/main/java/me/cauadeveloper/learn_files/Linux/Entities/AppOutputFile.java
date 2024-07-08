@@ -1,9 +1,9 @@
-package me.cauadeveloper.Linux.Entities;
+package me.cauadeveloper.learn_files.Linux.Entities;
 
 import java.io.*;
 import java.util.ArrayList;
 
-import static me.cauadeveloper.Linux.Entities.AppInputFile.printStr;
+import static me.cauadeveloper.learn_files.Linux.Entities.AppInputFile.printStr;
 
 public class AppOutputFile {
 

@@ -1,13 +1,9 @@
-package me.cauadeveloper.Win.entities;
+package me.cauadeveloper.learn_files.Win.Entities;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
 
-import static me.cauadeveloper.Win.entities.CreateCSV.newCSV;
-import static me.cauadeveloper.Win.entities.inputFile.inputRead;
-import static me.cauadeveloper.Win.entities.inputFile.inputStr;
+import static me.cauadeveloper.learn_files.Win.Entities.inputFile.inputRead;
+import static me.cauadeveloper.learn_files.Win.Entities.inputFile.inputStr;
 
 public class outputFile {
 

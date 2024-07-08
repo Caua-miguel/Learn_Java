@@ -1,9 +1,6 @@
-package me.cauadeveloper.Win.database.config;
+package me.cauadeveloper.learn_files.Win.database.config;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import static me.cauadeveloper.Win.entities.inputFile.inputRead;
+import static me.cauadeveloper.learn_files.Win.Entities.inputFile.inputRead;
 
 public class readConfig {
 

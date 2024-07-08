@@ -1,4 +1,4 @@
-package me.cauadeveloper.Win.database.config;
+package me.cauadeveloper.learn_files.Win.database.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

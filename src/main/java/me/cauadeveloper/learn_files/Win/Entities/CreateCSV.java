@@ -1,4 +1,4 @@
-package me.cauadeveloper.Win.entities;
+package me.cauadeveloper.learn_files.Win.Entities;
 
 import java.io.File;
 import java.io.IOException;
