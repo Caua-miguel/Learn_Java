@@ -1,4 +1,4 @@
-package me.cauadeveloper.Linux.database.config;
+package me.cauadeveloper.learn_files.Linux.database.config;
 
 import static me.cauadeveloper.Linux.Entities.AppInputFile.printReader;
 

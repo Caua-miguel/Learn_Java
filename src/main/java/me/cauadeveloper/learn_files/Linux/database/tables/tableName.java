@@ -1,11 +1,11 @@
-package me.cauadeveloper.Linux.database.tables;
+package me.cauadeveloper.learn_files.Linux.database.tables;
+
+import me.cauadeveloper.learn_files.Linux.database.config.readConfig;
+import me.cauadeveloper.learn_files.Linux.database.config.sqliteConn;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Arrays;
-
-import static me.cauadeveloper.Linux.database.config.readConfig.readLines;
-import static me.cauadeveloper.Linux.database.config.sqliteConn.getConn;
 
 
 public class tableName {
@@ -15,9 +15,9 @@ public class tableName {
         String sql = """
                 INSERT OR REPLACE into nome(nome) values (?)
                 """;
-        String[] arr = readLines();
+        String[] arr = readConfig.readLines();
         System.out.print(Arrays.toString(arr));
-        try (PreparedStatement stmt = getConn().prepareStatement(sql)){
+        try (PreparedStatement stmt = sqliteConn.getConn().prepareStatement(sql)){
 
             for (int i = 1; i <= arr.length-1; i++){
                 stmt.setString(1, arr[i]);
@@ -38,7 +38,7 @@ public class tableName {
                 nome varchar NOT NULL
                 )
                 """;
-        try(PreparedStatement stmt = getConn().prepareStatement(sql)){
+        try(PreparedStatement stmt = sqliteConn.getConn().prepareStatement(sql)){
 
             stmt.execute();
 

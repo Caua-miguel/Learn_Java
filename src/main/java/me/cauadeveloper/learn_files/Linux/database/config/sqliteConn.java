@@ -1,4 +1,4 @@
-package me.cauadeveloper.Linux.database.config;
+package me.cauadeveloper.learn_files.Linux.database.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
