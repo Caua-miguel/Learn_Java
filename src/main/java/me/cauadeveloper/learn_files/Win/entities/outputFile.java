@@ -1,13 +1,6 @@
-package me.cauadeveloper.Win.entities;
+package me.cauadeveloper.learn_files.Win.entities;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import static me.cauadeveloper.Win.entities.CreateCSV.newCSV;
-import static me.cauadeveloper.Win.entities.inputFile.inputRead;
-import static me.cauadeveloper.Win.entities.inputFile.inputStr;
 
 public class outputFile {
 
@@ -15,7 +8,7 @@ public class outputFile {
 
         try (BufferedOutputStream bf = new BufferedOutputStream(new FileOutputStream("C:\\Dev\\AplicationFiles\\outStr.txt"))){
 
-            String win = inputStr();
+            String win = inputFile.inputStr();
             bf.write(win.getBytes());
 
 //              ArrayList<Character> list = new ArrayList<>();
@@ -47,7 +40,7 @@ public class outputFile {
 
         try (BufferedWriter bf = new BufferedWriter(new FileWriter("C:\\Dev\\AplicationFiles\\teste.csv"))){
 
-            StringBuilder txt = inputRead();
+            StringBuilder txt = inputFile.inputRead();
             bf.write(String.valueOf(txt));
 
             System.out.println("StringBuilde Success");

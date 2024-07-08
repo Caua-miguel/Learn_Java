@@ -1,10 +1,10 @@
-package me.cauadeveloper.Win.database.config;
+package me.cauadeveloper.learn_files.Win.database.config;
 
 import java.io.File;
 import java.sql.SQLException;
 
-import static me.cauadeveloper.Win.database.tables.tableName.create;
-import static me.cauadeveloper.Win.database.tables.tableName.insert;
+import static me.cauadeveloper.learn_files.Win.database.tables.tableName.create;
+import static me.cauadeveloper.learn_files.Win.database.tables.tableName.insert;
 
 public class ApplyMethodsSQLite {
 

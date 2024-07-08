@@ -1,12 +1,11 @@
-package me.cauadeveloper.Win.database.tables;
+package me.cauadeveloper.learn_files.Win.database.tables;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Arrays;
 
-import static me.cauadeveloper.Win.database.config.readConfig.readLines;
-import static me.cauadeveloper.Win.database.config.sqliteConnection.getConn;
-import static me.cauadeveloper.Win.entities.inputFile.inputRead;
+import static me.cauadeveloper.learn_files.Win.database.config.readConfig.readLines;
+import static me.cauadeveloper.learn_files.Win.database.config.sqliteConnection.getConn;
 
 public class tableName {
 

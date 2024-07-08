@@ -1,9 +1,7 @@
-package me.cauadeveloper.Linux.Entities;
+package me.cauadeveloper.learn_files.Linux.Entities;
 
 import java.io.*;
 import java.util.ArrayList;
-
-import static me.cauadeveloper.Linux.Entities.AppInputFile.printStr;
 
 public class AppOutputFile {
 
@@ -12,7 +10,7 @@ public class AppOutputFile {
         try (BufferedOutputStream bf = new BufferedOutputStream(new FileOutputStream("/home/caua/Documentos/Dev/Backend/LearnFolders/Data/outptStr"))){
 
             ArrayList<Character> list = new ArrayList<>();
-            String lin = printStr();
+            String lin = AppInputFile.printStr();
             int count = lin.length()-1;
             int i = 0;
 
@@ -43,7 +41,7 @@ public class AppOutputFile {
 
         try (BufferedWriter bf = new BufferedWriter(new FileWriter("/home/caua/Documentos/Dev/Backend/LearnFolders/Data/"))){
 
-        String lin = printStr();
+        String lin = AppInputFile.printStr();
 
 
         }catch (IOException e) {

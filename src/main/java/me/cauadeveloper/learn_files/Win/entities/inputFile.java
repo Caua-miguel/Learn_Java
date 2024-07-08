@@ -1,10 +1,8 @@
-package me.cauadeveloper.Win.entities;
+package me.cauadeveloper.learn_files.Win.entities;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-
-import static me.cauadeveloper.Win.entities.CreateCSV.newCSV;
 
 public class inputFile {
 
