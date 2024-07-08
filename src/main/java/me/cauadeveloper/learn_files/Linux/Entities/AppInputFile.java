@@ -31,15 +31,17 @@ public class AppInputFile {
     }
 
 
-    public static void printReader(){
+    public static StringBuilder printReader(){
+
+        StringBuilder text = new StringBuilder();
+
         try (BufferedReader reader = new BufferedReader(new FileReader("/home/caua/Documentos/Dev/Backend/LearnFolders/Data/inptStr"))){
 
-            ArrayList<String> list = new ArrayList<>();
             String txt = reader.readLine();
 
             while (txt != null){
-                list.add(txt);
-                System.out.println(list.get(list.size()-1));
+                text.append(txt);
+                text.append("\n");
                 txt = reader.readLine();
             }
 
@@ -47,6 +49,7 @@ public class AppInputFile {
                 IOException e){
             e.printStackTrace();
         }
+        return text;
     }
 
 }

@@ -14,7 +14,6 @@ public class ApplyMethodsSQLite {
 
         if (!file.exists()){
             create();
-
         }
         insert();
     }

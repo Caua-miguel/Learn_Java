@@ -1,8 +1,10 @@
-package me.cauadeveloper.learn_files.Linux.Aplication;
+package me.cauadeveloper.Linux.Aplication;
 
 import java.io.IOException;
 
-import static me.cauadeveloper.learn_files.Linux.Entities.AppInputFile.printReader;
+import static me.cauadeveloper.Linux.Entities.AppInputFile.printReader;
+import static me.cauadeveloper.Linux.Entities.AppInputFile.printStr;
+import static me.cauadeveloper.Linux.Entities.AppOutputFile.outputStr;
 
 public class Aplication {
 
