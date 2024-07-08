@@ -1,6 +1,6 @@
 package me.cauadeveloper.learn_files.Linux.database.config;
 
-import static me.cauadeveloper.Linux.Entities.AppInputFile.printReader;
+import static me.cauadeveloper.learn_files.Linux.Entities.AppInputFile.printReader;
 
 public class readConfig {
 
