@@ -17,7 +17,6 @@ public class ContaTest {
 
     }
 
-
     // Executa antes de cada método
     @BeforeEach
     public void inicializarConta(){
@@ -25,13 +24,11 @@ public class ContaTest {
         conta.ativar();
     }
 
-
     @Test
     @DisplayName("Deve Depositar Com Conta Ativa")
     public void deveDepositarComContaAtiva(){
 
-        conta.depositar(depositoInicial);
-
+        Assertions.assertTrue(conta.depositar(depositoInicial));
         // Primeiro valor é o esperado o segundo é o obtido
         Assertions.assertEquals(depositoInicial, conta.getSaldo());
 
@@ -44,6 +41,7 @@ public class ContaTest {
         conta.inativar();
         conta.depositar(depositoInicial);
 
+        Assertions.assertFalse(conta.depositar(depositoInicial));
         // Primeiro valor é o esperado o segundo é o obtido
         Assertions.assertEquals(saldoZerado, conta.getSaldo());
 
@@ -53,8 +51,8 @@ public class ContaTest {
     @DisplayName("Deve Sacar Com Conta Ativa e Saldo Maior que o Valor de Saque")
     public void deveSacarComContaAtivaESaldoMaiorQueValorSaque(){
 
-        conta.depositar(depositoInicial);
-        conta.sacar(saqueValido);
+        Assertions.assertTrue(conta.depositar(depositoInicial));
+        Assertions.assertTrue(conta.sacar(saqueValido));
 
         // Primeiro valor é o esperado o segundo é o obtido
         Assertions.assertEquals(depositoInicial - saqueValido, conta.getSaldo());
@@ -65,8 +63,8 @@ public class ContaTest {
     @DisplayName("Não Deve Sacar Com Conta Ativa e Saldo Menor que o Valor de Saque")
     public void naoDeveSacarComContaAtivaESaldoMenorQueValorSaque(){
 
-        conta.depositar(depositoInicial);
-        conta.sacar(saqueInvalido);
+        Assertions.assertTrue(conta.depositar(depositoInicial));
+        Assertions.assertFalse(conta.sacar(saqueInvalido));
 
         // Primeiro valor é o esperado o segundo é o obtido
         Assertions.assertEquals(depositoInicial, conta.getSaldo());
@@ -77,10 +75,10 @@ public class ContaTest {
     @DisplayName("Não Deve Sacar Com Conta Inativa")
     public void naoDeveSacarComContaInativa(){
 
-        conta.depositar(depositoInicial);
+        Assertions.assertTrue(conta.depositar(depositoInicial));
 
         conta.inativar();
-        conta.sacar(saqueValido);
+        Assertions.assertFalse(conta.sacar(saqueValido));
 
         // Primeiro valor é o esperado o segundo é o obtido
         Assertions.assertEquals(depositoInicial, conta.getSaldo());
