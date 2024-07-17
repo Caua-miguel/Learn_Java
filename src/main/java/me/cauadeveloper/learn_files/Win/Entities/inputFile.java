@@ -34,8 +34,7 @@ public class inputFile {
 
     public static StringBuilder inputRead(){
 
-//        File newCSV = newCSV();
-
+        // preciso retornar um array, com as três colunas, vai ser os três métodos do bot.
         try(BufferedReader bf = new BufferedReader(new FileReader("C:\\Dev\\AplicationFiles\\data.csv"))){
 
             StringBuilder text = new StringBuilder();
