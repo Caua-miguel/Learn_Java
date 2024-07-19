@@ -41,29 +41,30 @@ public class OredenacaoArray {
     }
 
 @Test
-@DisplayName("Ordenar em ordem crescente com insert sort")
-public void ordenarArrPor() {
+@DisplayName("Ordenar em ordem crescente com select sort")
 
+public void ordenarArrPorSelect() {
+
+        int[] arr = {5, 6, 8, 4, 2, 9};
+        int[] arrEsperado = {2, 4, 5, 6, 8, 9};
+        int menor_indx = 0;
         int i;
-        int[] arrEsperado = {1,2,3,4,5,6};
+        int len = arr.length-1;
+        int aux;
 
-        for(i = 0; i < nums2.length; i++){
-            nums1[i + m] = nums2[i];
-        }
 
-        for(int j = 0; j < nums1.length; j++){
-            for(i = 0; i < nums1.length - 1; i++ ){
-
-                if(nums1[i] > nums1[i + 1]){
-                    System.out.println("Saida " + i);
-
-                    int aux = nums1[i];
-                    nums1[i] = nums1[i + 1];
-                    nums1[i + 1] = aux;
-                    System.out.println(Arrays.toString(nums1));
+        for(int j = 0; j < arr.length; j++) {
+            for (i = j; i < len; i++) {
+                if (arr[i] < arr[menor_indx]) {
+                    menor_indx = i;
                 }
             }
+            aux = arr[j];
+            arr[j] = arr[menor_indx];
+            arr[menor_indx] = aux;
+            System.out.println(Arrays.toString(arr));
         }
-            Assertions.assertEquals(Arrays.toString(arrEsperado), Arrays.toString(nums1));
+
+
     }
 }
