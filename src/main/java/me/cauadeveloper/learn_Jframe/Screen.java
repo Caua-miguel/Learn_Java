@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class Screen extends JFrame implements ActionListener {
 
-    JTextField text;
+    public static JTextField text;
 
     public Screen(){
 
