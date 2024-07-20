@@ -7,10 +7,12 @@ import java.awt.event.ActionListener;
 
 public class Screen extends JFrame implements ActionListener {
 
+    JTextField text;
+
     public Screen(){
 
         setTitle("Janela");
-        setVisible(true);
+
         setSize(800, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        jFrame.setResizable(false); // Isso impede o redimencionamento de tela
@@ -25,13 +27,19 @@ public class Screen extends JFrame implements ActionListener {
         jButton.setBackground(new Color(2, 2, 2));
 
         add(jButton);
-
         jButton.addActionListener(this);
 
+        text = new JTextField("Clique aqui");
+        text.setBounds(100, 100, 400, 50);
+        text.setFont(new Font("Arial", Font.ITALIC, 15));
+        text.setText("texto");
+        add(text);
+
+        setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(null, "erro", "Titulo",JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, text.getText(), "Titulo",JOptionPane.ERROR_MESSAGE);
     }
 }
