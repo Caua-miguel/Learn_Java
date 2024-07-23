@@ -47,24 +47,25 @@ public void ordenarArrPorSelect() {
 
         int[] arr = {5, 6, 8, 4, 2, 9};
         int[] arrEsperado = {2, 4, 5, 6, 8, 9};
-        int menor_indx = 0;
-        int i;
-        int len = arr.length-1;
+        int len = arr.length;
         int aux;
 
 
-        for(int j = 0; j < arr.length; j++) {
-            for (i = j; i < len; i++) {
+        for(int j = 0; j < len; j++) {
+            int menor_indx = j;
+            for (int i = j; i < len; i++) {
                 if (arr[i] < arr[menor_indx]) {
                     menor_indx = i;
                 }
             }
-            aux = arr[j];
-            arr[j] = arr[menor_indx];
-            arr[menor_indx] = aux;
-            System.out.println(Arrays.toString(arr));
+            if(arr[j] != arr[menor_indx]){
+                aux = arr[j];
+                arr[j] = arr[menor_indx];
+                arr[menor_indx] = aux;
+            }
         }
-
+        System.out.println(Arrays.toString(arr));
+        Assertions.assertEquals(Arrays.toString(arrEsperado), Arrays.toString(arr));
 
     }
 }
