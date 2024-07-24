@@ -68,4 +68,29 @@ public void ordenarArrPorSelect() {
         Assertions.assertEquals(Arrays.toString(arrEsperado), Arrays.toString(arr));
 
     }
+
+    @Test
+    @DisplayName("Ordenar em ordem crescente com bubble sort")
+    public void ordenarArrPorBubbleSort() {
+
+        int[] arr = {5, 6, 8, 4, 2, 9};
+        int[] arrEsperado = {2, 4, 5, 6, 8, 9};
+        int len = arr.length;
+        int aux;
+
+
+        for(int j = 0; j < len; j++) {
+            for (int i= 0; i < len-1; i++){
+                if (arr[i] > arr[i + 1]){
+                    aux = arr[i + 1];
+                    arr[i + 1] = arr[i];
+                    arr[i] = aux;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+        Assertions.assertEquals(Arrays.toString(arrEsperado), Arrays.toString(arr));
+
+    }
+
 }
